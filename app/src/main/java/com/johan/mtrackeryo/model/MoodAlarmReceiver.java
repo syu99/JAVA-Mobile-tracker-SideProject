@@ -24,12 +24,12 @@ import static com.johan.mtrackeryo.view.MoodAdapter.NUMBER_ITEM;
 
 public class MoodAlarmReceiver extends BroadcastReceiver {
     /*
-    * @onReceive method
-    * @context param
-    * @intent param
-    *
-    * This method is called when the BroadcastReceiver is receiving
-    * */
+     * @onReceive method
+     * @context param
+     * @intent param
+     *
+     * This method is called when the BroadcastReceiver is receiving
+     * */
     @Override
     public void onReceive(Context context, Intent intent) {
         MoodDataStorage.loadData(context);
@@ -55,11 +55,11 @@ public class MoodAlarmReceiver extends BroadcastReceiver {
     }
 
     /*
-    * @resetMoodEachDay method
-    *
-    * This method reset comment and index to theirs originals status
-    * Every time the data is saved we call this method to get the app at his standard state
-    * */
+     * @resetMoodEachDay method
+     *
+     * This method reset comment and index to theirs originals status
+     * Every time the data is saved we call this method to get the app at his standard state
+     * */
     public void resetMoodEachDay() {
         comment = "";
         indexMood = 3;

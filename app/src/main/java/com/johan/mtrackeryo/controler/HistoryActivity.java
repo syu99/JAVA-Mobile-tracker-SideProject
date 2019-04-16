@@ -22,6 +22,7 @@ import static com.johan.mtrackeryo.controler.MainActivity.indexMood;
 import static com.johan.mtrackeryo.model.MoodDataStorage.mListMoodItems;
 import static com.johan.mtrackeryo.view.MoodAdapter.NUMBER_ITEM;
 
+
 public class HistoryActivity extends AppCompatActivity {
 
     public static MoodAdapter mAdapter;
@@ -57,6 +58,7 @@ public class HistoryActivity extends AppCompatActivity {
         }
 
         /**Series of button for test**/
+        
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,11 +90,11 @@ public class HistoryActivity extends AppCompatActivity {
     }
 
     /*
-    * @toastMaker
-    * @position param  the current index of the item list
-    *
-    * This method make a custom toast
-    * */
+     * @toastMaker
+     * @position param  the current index of the item list
+     *
+     * This method make a custom toast
+     * */
     public void toastMaker(int position) {
         //First, get the comment store in the variable
         String text = mListMoodItems.get(position).getComment();
@@ -115,11 +117,11 @@ public class HistoryActivity extends AppCompatActivity {
     }
 
     /*
-    * @buildRecyclerView method
-    *
-    * This method handle the construction of an adaptive layout
-    * Two classes are called whenever this methods is used
-    * */
+     * @buildRecyclerView method
+     *
+     * This method handle the construction of an adaptive layout
+     * Two classes are called whenever this methods is used
+     * */
     public void buildRecyclerView() {
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);

@@ -17,6 +17,7 @@ import com.johan.mtrackeryo.model.ListMoodItem;
 import java.util.ArrayList;
 
 
+
 public class MoodAdapter extends RecyclerView.Adapter<MoodAdapter.ListMoodViewHolder> {
 
     public static final int NUMBER_ITEM = 8;
@@ -31,11 +32,11 @@ public class MoodAdapter extends RecyclerView.Adapter<MoodAdapter.ListMoodViewHo
     }
 
     /*
-    * @setOnItemClickListener method
-    * @listener param  you can call View.OnClickListener()
+     * @setOnItemClickListener method
+     * @listener param  you can call View.OnClickListener()
      *
      * This method handle the click on items parent or/and their child
-    * */
+     * */
     public void setOnItemClickListener(OnItemClickListener listener) {
         mListener = listener;
     }
@@ -57,13 +58,13 @@ public class MoodAdapter extends RecyclerView.Adapter<MoodAdapter.ListMoodViewHo
     }
 
     /*
-    * @onBindViewHolder method
-    * @holder param to update the RecyclerView.ViewHolder contents with the item at the given position
-    * @position param the position of a data item within an Adapter.
-    *
-    * This method handle the content and the position of each item
-    *
-    * */
+     * @onBindViewHolder method
+     * @holder param to update the RecyclerView.ViewHolder contents with the item at the given position
+     * @position param the position of a data item within an Adapter.
+     *
+     * This method handle the content and the position of each item
+     *
+     * */
     @Override
     public void onBindViewHolder(ListMoodViewHolder holder, int position) {
         //Define the item position
@@ -84,10 +85,10 @@ public class MoodAdapter extends RecyclerView.Adapter<MoodAdapter.ListMoodViewHo
     }
 
     /*
-    * @getItemCount method
-    *
-    * This method return the number of item holding
-    * */
+     * @getItemCount method
+     *
+     * This method return the number of item holding
+     * */
     @Override
     public int getItemCount() {
         //This allow to keep only 7 items on the screen and then remove the older one when limit is reached
@@ -97,12 +98,12 @@ public class MoodAdapter extends RecyclerView.Adapter<MoodAdapter.ListMoodViewHo
     }
 
     /*
-    * @layoutResizer method
-    * @holder param
-    * @currentItem param
-    *
-    * This method allow to modify the layout size useful to display item at different size range
-    * */
+     * @layoutResizer method
+     * @holder param
+     * @currentItem param
+     *
+     * This method allow to modify the layout size useful to display item at different size range
+     * */
     public void layoutResizer(ListMoodViewHolder holder, ListMoodItem currentItem) {
         //Display metric can catch the width or/and height of the device
         DisplayMetrics displaymetrics = new DisplayMetrics();
@@ -161,3 +162,4 @@ public class MoodAdapter extends RecyclerView.Adapter<MoodAdapter.ListMoodViewHo
     }
 
 }
+

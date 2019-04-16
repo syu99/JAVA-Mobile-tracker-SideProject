@@ -29,6 +29,7 @@ import java.util.Calendar;
 public class MainActivity extends AppCompatActivity {
 
 
+    public static final int BUNDLE_REQUEST_CODE = 42;
     private static final int SWIPE_MIN_DISTANCE = 130;
     private static final int SWIPE_THRESHOLD_VELOCITY = 200;
     public static String comment = "";
@@ -45,13 +46,12 @@ public class MainActivity extends AppCompatActivity {
     private ImageView mArrowUp;
     private ImageView mArrowDown;
     private Animation anim;
-    public static final int BUNDLE_REQUEST_CODE = 42;
     public static final int[][] LIST_COLOR_IMG = {
-            {R.color.red,
-                    R.color.grey,
-                    R.color.blue,
-                    R.color.green,
-                    R.color.yellow},
+            {R.color.faded_red,
+                    R.color.warm_grey,
+                    R.color.cornflower_blue_65,
+                    R.color.light_sage,
+                    R.color.banana_yellow},
             {R.drawable.smiley_sad,
                     R.drawable.smiley_disappointed,
                     R.drawable.smiley_normal,
@@ -229,7 +229,7 @@ public class MainActivity extends AppCompatActivity {
          * @onDown method
          * @MotionEvent parameter
          *
-         * it is necessary to return true  from onDown for the onFling event to register
+         * it is necessary to return true from onDown for the onFling event to register
          * */
         @Override
         public boolean onDown(MotionEvent event) {
@@ -256,7 +256,7 @@ public class MainActivity extends AppCompatActivity {
             if (indexMood < LIST_COLOR_IMG[0].length - 1 && event1.getY() - event2.getY() > SWIPE_MIN_DISTANCE
                     && event1.getY() - event2.getY() > SWIPE_THRESHOLD_VELOCITY) {
                 //Image, sound and background color change every time you swipe in a direction
-                getSound(R.raw.smb_coin);
+                getSound(R.raw.bubble);
                 indexMood++;
                 mSmileyImg.setImageResource(LIST_COLOR_IMG[1][indexMood]);
                 mRelativeLayout.setBackgroundColor(getResources().getColor(LIST_COLOR_IMG[0][indexMood]));
@@ -265,7 +265,7 @@ public class MainActivity extends AppCompatActivity {
                 //This condition handle when the user swipes the screen from top to the bottom
             } else if (indexMood > 0 && event2.getY() - event1.getY() > SWIPE_MIN_DISTANCE
                     && event2.getY() - event1.getY() > SWIPE_THRESHOLD_VELOCITY) {
-                getSound(R.raw.smb_jump);
+                getSound(R.raw.pop);
                 indexMood--;
                 mSmileyImg.setImageResource(LIST_COLOR_IMG[1][indexMood]);
                 mRelativeLayout.setBackgroundColor(getResources().getColor(LIST_COLOR_IMG[0][indexMood]));

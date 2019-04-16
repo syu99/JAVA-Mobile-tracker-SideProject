@@ -28,11 +28,11 @@ public class MoodDataStorage {
     }
 
     /*
-    * @saveData method
-    * @activity param context of the activity
-    *
-    * This method allow to save array in shared preferences using Gson library
-    * */
+     * @saveData method
+     * @activity param context of the activity
+     *
+     * This method allow to save array in shared preferences using Gson library
+     * */
     public static void saveData(Context activity) {
         SharedPreferences sharedPreferences = activity.getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -43,11 +43,11 @@ public class MoodDataStorage {
     }
 
     /*
-   * @loadData method
-   * @activity param context of the activity
-   *
-   * This method allow to load array from shared preferences using Gson library
-   * */
+     * @loadData method
+     * @activity param context of the activity
+     *
+     * This method allow to load array from shared preferences using Gson library
+     * */
     public static void loadData(Context activity) {
         SharedPreferences sharedPreferences = activity.getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
         Gson gson = new Gson();
@@ -62,11 +62,11 @@ public class MoodDataStorage {
     }
 
     /*
-   * @clear method
-   * @activity param context of the activity
-   *
-   * This method allow to clear data from shared preferences (useful when you need to reset the view)
-   * */
+     * @clear method
+     * @activity param context of the activity
+     *
+     * This method allow to clear data from shared preferences (useful when you need to reset the view)
+     * */
     public static void clearData(Activity activity) {
         SharedPreferences sharedPreferences = activity.getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
